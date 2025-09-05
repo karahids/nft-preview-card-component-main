@@ -1,0 +1,81 @@
+body{
+    background-color:  hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: outfit,arial;
+    padding: 30px;
+}
+.maincard{
+    margin-top: 50px;
+background-color:  hsl(216, 50%, 16%);
+border: solid, hsl(216, 50%, 16%),15px;
+border-radius: 10px;
+width: 300px;
+height: 350px;
+
+}
+.main-img{
+    border-radius: 10px;
+    height: 80px;
+    width: 300px;
+}
+p{
+    font-size: 18px;
+}
+.main-text{
+    color: white;
+}
+.body-text,.side{
+    color: grey;
+}
+.secondhead{
+    color: aqua;
+    margin-left: -50px;
+}
+.lowerpart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatar{
+    
+    border: solid, white,1px;
+    border-radius: 40px;
+    width: 25px;
+    height: 25px;
+}
+.end{
+    display: flex;
+    align-items: center;
+  
+   border-top: solid;
+   border-color: grey;
+   padding-top: 10px;
+   border-width: 1px;
+
+   
+   
+}
+.create{
+   color: grey;
+   margin-left: 10px;
+   
+}
+.jules{
+    color: white;
+}
+.icon{
+    width: 12px;
+    height: 12px;
+    
+}
+.diamond{
+
+   width: 15px;
+    height: 15px;
+    background-color: cyan;
+    transform: rotate(45deg);
+    
+}
+
