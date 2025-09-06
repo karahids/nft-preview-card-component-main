@@ -1,120 +1,145 @@
-body{
-    background-color:  hsl(217, 54%, 11%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: outfit,arial;
-    padding: 30px;
-    font-size: 18px;
-    
-}
-.maincard{
-    margin-top: 50px;
-background-color:  hsl(216, 50%, 16%);
-border: solid, hsl(216, 50%, 16%),15px;
-border-radius: 10px;
-width: 21dvw;
-height: 80dvh;
-
-
-}
-.main-img{
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    background-color: aqua;
-    opacity: 1;
-}
-.diamondcard{
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    height: 40dvh;
-    width: 21dvw;
-    z-index: 10;
-
-}
-.diamondcard::before{
-content:"" ;
-position: absolute;
-inset: 0;
-background-color: aqua;
-opacity: 0;
-transition: 0.5s ease-in-out;
-
-}
-.diamondcard :hover ::before{
-opacity: 0.1;
-
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Outfit, Arial, sans-serif;
+  padding: 30px;
+  font-size: 18px;
+  min-height: 100vh; /* ensures full height on mobile */
 }
 
-.eye{
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-left: 50%;
-    transform: translate(-50%,-50%) ;
-    transition: 0.5s 0.2s opacity;
-}
-.diamondcard:hover .eye{
-    opacity: 1;
+.maincard {
+  margin-top: 50px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px; /* responsive max width */
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-p{
-    font-size: 18px;
-}
-.main-text{
-    color: white;
-}
-.body-text,.side{
-    color: grey;
-    margin-bottom: 0;
-    .bodys{
-        align-items: center;
-    }
-}
-.secondhead{
-    color: aqua;
-    margin-left: -50px;
-}
-.lowerpart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.avatar{
-    
-    border: solid, white,1px;
-    border-radius: 40px;
-    width: 25px;
-    height: 25px;
-}
-.end{
-    display: flex;
-    align-items: center;
-  
-   border-top: solid;
-   border-color: grey;
-   padding-top: 10px;
-   border-width: 1px;
-
-   
-   
-}
-.create{
-   color: grey;
-   margin-left: 10px;
-   
-}
-.jules{
-    color: white;
-}
-.icon{
-    width: 12px;
-    height: 12px;
-    
+.main-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: aqua;
 }
 
+.diamondcard {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps it square */
+  z-index: 10;
+}
+
+.diamondcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: aqua;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.diamondcard:hover::before {
+  opacity: 0.1;
+}
+
+.eye {
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out 0.2s;
+}
+
+.diamondcard:hover .eye {
+  opacity: 1;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.main-text {
+  color: white;
+}
+
+.body-text,
+.side {
+  color: grey;
+  margin-bottom: 0;
+}
+
+.secondhead {
+  color: aqua;
+  margin-left: -50px; /* smaller negative margin for mobile */
+}
+
+.lowerpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  border: solid 1px white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  border-top: solid 1px grey;
+  padding-top: 10px;
+}
+
+.create {
+  color: grey;
+  margin-left: 10px;
+}
+
+.jules {
+  color: white;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablets */
+@media (min-width: 600px) {
+  .maincard {
+    max-width: 450px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .maincard {
+    max-width: 600px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .secondhead {
+    margin-left: -320px;
+  }
+}
