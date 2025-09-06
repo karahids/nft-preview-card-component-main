@@ -5,21 +5,63 @@ body{
     justify-content: center;
     font-family: outfit,arial;
     padding: 30px;
+    font-size: 18px;
+    
 }
 .maincard{
     margin-top: 50px;
 background-color:  hsl(216, 50%, 16%);
 border: solid, hsl(216, 50%, 16%),15px;
 border-radius: 10px;
-width: 300px;
-height: 350px;
+width: 21dvw;
+height: 80dvh;
+
 
 }
 .main-img{
     border-radius: 10px;
-    height: 80px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: aqua;
+    opacity: 1;
 }
+.diamondcard{
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 40dvh;
+    width: 21dvw;
+    z-index: 10;
+
+}
+.diamondcard::before{
+content:"" ;
+position: absolute;
+inset: 0;
+background-color: aqua;
+opacity: 0;
+transition: 0.5s ease-in-out;
+
+}
+.diamondcard :hover ::before{
+opacity: 0.1;
+
+}
+
+.eye{
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+left: 50%;
+    transform: translate(-50%,-50%) ;
+    transition: 0.5s 0.2s opacity;
+}
+.diamondcard:hover .eye{
+    opacity: 1;
+}
+
 p{
     font-size: 18px;
 }
@@ -28,6 +70,10 @@ p{
 }
 .body-text,.side{
     color: grey;
+    margin-bottom: 0;
+    .bodys{
+        align-items: center;
+    }
 }
 .secondhead{
     color: aqua;
@@ -37,6 +83,7 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .avatar{
     
@@ -68,14 +115,6 @@ p{
 .icon{
     width: 12px;
     height: 12px;
-    
-}
-.diamond{
-
-   width: 15px;
-    height: 15px;
-    background-color: cyan;
-    transform: rotate(45deg);
     
 }
 
